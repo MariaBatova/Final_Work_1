@@ -50,21 +50,21 @@ void PrintArray(string[] array)
 try
 {
     Console.Write("Введите размер массива: ");
-    int sizeArray = Convert.ToInt32(Console.ReadLine());
-    while(sizeArray < 0)
+    int sizeAr = Convert.ToInt32(Console.ReadLine());
+    while(sizeAr < 0)
     {
         Console.WriteLine("Размер массива - это целое положительное число.");
         Console.Write("Введите новое значение: ");
-        sizeArray = Convert.ToInt32(Console.ReadLine());
+        sizeAr = Convert.ToInt32(Console.ReadLine());
     }
-    if(sizeArray == 0) 
+    if(sizeAr == 0) 
         Console.WriteLine("Размер массива = 0. Массив пустой: []");
     else 
     {
-        string[] stringArray = CreateArray(sizeArray);
-        PrintArray(stringArray);
-        string[] newStringArray = StringArray(stringArray);
-        PrintArray(newStringArray);
+        string[] Array = CreateArray(sizeAr);
+        PrintArray(Array);
+        string[] newArray = StringArray(Array);
+        PrintArray(newArray);
     }
 }
 catch(Exception)
